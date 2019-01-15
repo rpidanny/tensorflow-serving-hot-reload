@@ -3,16 +3,16 @@ import json
 
 def config_parser(ordered_pairs):
     models = []
-    d = {}
-    for k, v in ordered_pairs:
-        if (k == 'config'):
-            models.append({k: v})
+    dic = {}
+    for key, val in ordered_pairs:
+        if key == 'config':
+            models.append({key: val})
         else:
-            d[k] = v
-    if (len(models) > 0):
+            dic[key] = val
+    if models:
         return models
     else:
-        return d
+        return dic
 
 
 def format_config_string(config_string):

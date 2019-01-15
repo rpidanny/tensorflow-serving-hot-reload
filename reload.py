@@ -1,22 +1,20 @@
-import grpc
 import argparse
+import grpc
 
-from tensorflow_serving.apis import model_service_pb2
 from tensorflow_serving.apis import model_service_pb2_grpc
 from tensorflow_serving.apis import model_management_pb2
 from tensorflow_serving.config import model_server_config_pb2
-from tensorflow_serving.util import status_pb2
 
 from helper import load_config
 
 
 def options():
     parser = argparse.ArgumentParser(
-        description="Reload tensorflow serving server with new config")
+        description='Reload tensorflow serving server with new config')
     parser.add_argument(
-        "-c", "--config", help="Serving config file", required=True)
+        '-c', '--config', help='Serving config file', required=True)
     parser.add_argument(
-        "-H", "--host", help="Tensorflow serving IP with Port", required=True)
+        '-H', '--host', help='Tensorflow serving IP with Port', required=True)
 
     return parser.parse_args()
 
