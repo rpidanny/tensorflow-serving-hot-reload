@@ -4,8 +4,8 @@ A script to dynamically load / unload tensorflow models in serving using serving
 
 ## Requirements
 
-- tensorflow===1.12.0
-- tensorflow-serving-api===1.12.0
+- `tensorflow===1.12.0`
+- `tensorflow-serving-api===1.12.0`
 
 ## Usage
 
