@@ -46,13 +46,13 @@ def main(config_path, host):
     print('Sending request')
     response = stub.HandleReloadConfigRequest(request, 30)
     if response.status.error_code == 0:
-        print("Reload successful")
+        print('Reload successful')
     else:
-        print("Reload failed!")
+        print('Reload failed!')
         print(response.status.error_code)
         print(response.status.error_message)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     args = options()
     main(args.config, args.host)
